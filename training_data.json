@@ -1,0 +1,87 @@
+{
+  "training_metadata": {
+    "version": "1.0",
+    "created_at": "2026-06-30T20:00:00Z",
+    "last_updated": "2026-06-30T20:00:00Z",
+    "training_steps_total": 0,
+    "total_episodes": 0,
+    "model_instances": 1
+  },
+  "learning_insights": {
+    "hider_strategies": [
+      {
+        "strategy_id": "hide_corner",
+        "description": "Hide in map corners for reduced visibility",
+        "effectiveness": 0.0,
+        "episodes_discovered": 0,
+        "timestamp": null
+      },
+      {
+        "strategy_id": "hide_movement",
+        "description": "Use erratic movement patterns to confuse seekers",
+        "effectiveness": 0.0,
+        "episodes_discovered": 0,
+        "timestamp": null
+      },
+      {
+        "strategy_id": "hide_clustering",
+        "description": "Stay near other hiders to create confusion",
+        "effectiveness": 0.0,
+        "episodes_discovered": 0,
+        "timestamp": null
+      }
+    ],
+    "seeker_strategies": [
+      {
+        "strategy_id": "seek_sweep",
+        "description": "Sweep the map in a systematic pattern",
+        "effectiveness": 0.0,
+        "episodes_discovered": 0,
+        "timestamp": null
+      },
+      {
+        "strategy_id": "seek_chase",
+        "description": "Chase any movement detected",
+        "effectiveness": 0.0,
+        "episodes_discovered": 0,
+        "timestamp": null
+      }
+    ]
+  },
+  "agent_performance": {
+    "student_hider_1": {
+      "total_episodes": 0,
+      "average_survival_steps": 0.0,
+      "win_rate": 0.0,
+      "learned_strategies": [],
+      "last_update": null,
+      "contribution_to_shared_memory": 0
+    },
+    "student_hider_2": {
+      "total_episodes": 0,
+      "average_survival_steps": 0.0,
+      "win_rate": 0.0,
+      "learned_strategies": [],
+      "last_update": null,
+      "contribution_to_shared_memory": 0
+    },
+    "snitch_monitor": {
+      "total_episodes": 0,
+      "anomalies_detected": 0,
+      "accuracy": 0.0,
+      "last_update": null,
+      "contribution_to_shared_memory": 0
+    }
+  },
+  "shared_memory": {
+    "global_insights": [],
+    "best_hider_techniques": [],
+    "best_seeker_techniques": [],
+    "anomaly_patterns": [],
+    "reward_hacking_attempts": [],
+    "last_sync": null,
+    "sync_frequency_seconds": 300,
+    "instances_connected": 1
+  },
+  "training_episodes": []
+}
