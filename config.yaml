@@ -1,0 +1,59 @@
+# Magnet AI Configuration
+
+# GPU Settings
+gpu:
+  device: "cuda:0"  # Change to "cpu" if no GPU
+  vram_limit_mb: 8000  # Adjust based on your GPU (RTX 3060 = ~12GB total)
+
+# Training Settings
+training:
+  total_timesteps: 1000000
+  learning_rate: 3e-4
+  batch_size: 64
+  n_steps: 2048
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  vf_coef: 0.5
+
+# Environment Settings
+environment:
+  num_agents: 3  # 2 students + 1 snitch (Tier 1)
+  num_hiders: 2
+  num_seekers: 1
+  episode_length: 300  # 5 minutes per game
+  map_size: 50  # 50x50 unit arena
+  num_parallel_envs: 4  # Simultaneous game instances
+  render: true
+  render_fps: 30
+
+# LLM Chat Settings
+chat:
+  model_name: "magnet-base-v1"
+  context_window: 2048
+  temperature: 0.7
+  max_tokens: 512
+  save_conversations: true
+  conversation_dir: "./conversations"
+
+# Safety Settings
+safety:
+  enable_snitch_model: true
+  snitch_threshold: 0.7  # Alert if suspicious behavior > 70%
+  reward_hack_detection: true
+  max_reward_per_step: 1.0
+
+# Logging
+logging:
+  log_dir: "./logs"
+  log_level: "INFO"
+  save_interval: 100  # Save model every 100 episodes
+  tensorboard: true
+
+# Teacher Settings
+teacher:
+  enable_teacher_input: true
+  teacher_feedback_weight: 0.3
+  max_feedback_length: 10000  # characters
